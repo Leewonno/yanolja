@@ -1,0 +1,20 @@
+'use client'
+
+import styled from "styled-components";
+
+const Component = styled.div`
+  width: 100%;
+  height: 100vh;
+`
+
+type Props = {
+  children: React.ReactNode
+}
+
+export default function Layout({ children }: Props) {
+  return (
+    <Component>
+      {children}
+    </Component>
+  );
+}
