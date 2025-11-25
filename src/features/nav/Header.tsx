@@ -39,6 +39,41 @@ const NavCategory = styled(Link)`
   text-decoration: none;
 `
 
+const NavListBox = styled.div`
+  position: absolute;
+  top: 97px;
+  left: 0;
+  padding: 0 40px 20px;
+  width: 100%;
+  background-color: #FFF;
+  border-bottom: 1px solid #D9D9D9;
+  z-index: 10;
+  display: none;
+  justify-content: center;
+  padding-top: 20px;
+
+  ${Wrapper}:hover & {
+    display: flex;
+  }
+
+  ${NavBox}:hover & {
+    display: flex;
+  }
+
+  &:hover {
+    display: flex;
+  }
+`
+
+const NavList = styled.ul`
+  display: block;
+  width: 160px;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+`
+
 const TranslateBox = styled.div`
   max-width: 234px;
   display: flex;
@@ -55,35 +90,15 @@ const TranslateSelect = styled.select`
   background-image: url(${lang_arrow_black.src});
   background-position: right center;
   background-repeat: no-repeat;
-  -webkit-appearance: none;
-  -moz-appearance: none;
   text-indent: 1px;
-`
-
-const NavListBox = styled.div`
-  position: absolute;
-  top: 97px;
-  padding: 0 40px 20px;
-  width: 100%;
-  background-color: #FFF;
-  border-bottom: 1px solid #D9D9D9;
-  z-index: 10;
-  /* display: flex;
-  align-items: center;
-  justify-content: space-between; */
-`
-
-const NavList = styled.ul`
-  display: block;
-  width: 160px;
-  text-align: center;
-  margin: 0;
-  padding: 0;
-  list-style: none;
 `
 
 const NavListItem = styled.li`
   padding: 10px 0;
+
+  &:hover {
+    font-weight: 600;
+  }
 `
 
 const NavLink = styled(Link)`
@@ -101,6 +116,31 @@ export default function Header() {
         <NavCategory href={'/'}>Datalab</NavCategory>
         <NavCategory href={'/'}>Indexes</NavCategory>
         <NavCategory href={'/'}>About</NavCategory>
+        <NavListBox>
+          <NavList>
+            <NavListItem><NavLink href={'/'}>인사이트</NavLink></NavListItem>
+            <NavListItem><NavLink href={'/'}>브리프</NavLink></NavListItem>
+            <NavListItem><NavLink href={'/'}>동향보고서</NavLink></NavListItem>
+            <NavListItem><NavLink href={'/'}>연구보고서</NavLink></NavListItem>
+            <NavListItem><NavLink href={'/'}>구독신청</NavLink></NavListItem>
+          </NavList>
+          <NavList>
+            <NavListItem><NavLink href={'/'}>국내 숙박업 실적 지표</NavLink></NavListItem>
+            <NavListItem><NavLink href={'/'}>관광지표 대시보드</NavLink></NavListItem>
+            <NavListItem><NavLink href={'/'}>데이터 다운로드</NavLink></NavListItem>
+          </NavList>
+          <NavList>
+            <NavListItem><NavLink href={'/'}>야놀자 매력도 지수</NavLink></NavListItem>
+            <NavListItem><NavLink href={'/'}>야놀자 브랜드자산 지수</NavLink></NavListItem>
+          </NavList>
+          <NavList>
+            <NavListItem><NavLink href={'/'}>연구원 소개</NavLink></NavListItem>
+            <NavListItem><NavLink href={'/'}>인사말</NavLink></NavListItem>
+            <NavListItem><NavLink href={'/'}>연구원 소식</NavLink></NavListItem>
+            <NavListItem><NavLink href={'/'}>미디어</NavLink></NavListItem>
+            <NavListItem><NavLink href={'/'}>공지사항</NavLink></NavListItem>
+          </NavList>
+        </NavListBox>
       </NavBox>
       <TranslateBox>
         <TranslateSelect>
@@ -109,15 +149,6 @@ export default function Header() {
         </TranslateSelect>
       </TranslateBox>
       {/* NavBox 마우스 호버 시 나오는 nav */}
-      <NavListBox>
-        <NavList>
-          <NavListItem><NavLink href={'/'}>인사이트</NavLink></NavListItem>
-          <NavListItem><NavLink href={'/'}>브리프</NavLink></NavListItem>
-          <NavListItem><NavLink href={'/'}>동향보고서</NavLink></NavListItem>
-          <NavListItem><NavLink href={'/'}>연구보고서</NavLink></NavListItem>
-          <NavListItem><NavLink href={'/'}>구독신청</NavLink></NavListItem>
-        </NavList>
-      </NavListBox>
     </Wrapper>
   );
 }
