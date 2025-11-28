@@ -19,11 +19,12 @@ const Wrapper = styled.header`
 
 const LogoBox = styled(Link)`
   position: relative;
-  max-width: 180px;
+  max-width: 234px;
 `
 
 const LogoImage = styled(Image)`
-  width: 100%;
+  width: 260px;
+  height: 32px;
 `
 
 const NavBox = styled.nav`
@@ -32,7 +33,7 @@ const NavBox = styled.nav`
 
 const NavCategory = styled(Link)`
   width: 160px;
-  font-weight: 600;
+  font-weight: 500;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -75,8 +76,8 @@ const NavList = styled.ul`
 `
 
 const TranslateBox = styled.div`
-  max-width: 234px;
   display: flex;
+  width: 234px;
 `
 
 const TranslateSelect = styled.select`
@@ -91,6 +92,7 @@ const TranslateSelect = styled.select`
   background-position: right center;
   background-repeat: no-repeat;
   text-indent: 1px;
+  -webkit-appearance: none;
 `
 
 const NavListItem = styled.li`

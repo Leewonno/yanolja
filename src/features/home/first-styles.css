@@ -1,0 +1,44 @@
+.swiper {
+    width: 100%;
+    height: 100%;
+}
+
+.swiper-slide {
+    position: relative;
+}
+
+/* 이미지 */
+.swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    height: 350px;
+    overflow: hidden;
+    z-index: -1;
+    filter: brightness(70%);
+}
+
+/* 이전 버튼 */
+.swiper-button-prev {
+    top: 100% !important;
+    left: 20px !important;
+}
+
+/* 다음 버튼 */
+.swiper-button-next {
+    right: 20px !important;
+}
+
+/* 왼쪽 */
+.swiper-slide-prev {
+    opacity: 0;
+    /* 왼쪽 카드 완전히 숨김 */
+    pointer-events: none;
+}
+
+/* 그림자 */
+.swiper-slide-shadow {
+    opacity: 0.1 !important;
+    /* 그림자 완전히 투명 */
+}
